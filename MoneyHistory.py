@@ -4,6 +4,11 @@ import openpyxl
 from openpyxl import Workbook
 from datetime import datetime
 
+"""
+NEEDS:
+python 3.X
+openpyxl - to install : pip install openpyxl
+"""
 
 app = Flask(__name__)
 
