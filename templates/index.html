@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enregistrement des Monnaies Reçues</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-column {
+            width: 30%;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"] {
+            width: 100px;
+        }
+
+        h2, h3 {
+            margin-top: 20px;
+        }
+
+        #total_coins_value, #total_banknotes_value, #deltotal_banknotes_value, #total_general_value {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enregistrement des Monnaies Reçues</h1>
+    <form method="post" action="/">
+        <label for="date">Date :</label>
+        <input type="date" id="date" name="date" required><br>
+    <div class="form-container">
+        <div class="form-column">
+            <h2>Monnaies</h2>
+            
+                
+                <label for="coin_1">1 centime  :</label>
+                <input type="number" id="coin_1" name="coin_1" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="coin_2">2 centimes :</label>
+                <input type="number" id="coin_2" name="coin_2" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="coin_5">5 centimes :</label>
+                <input type="number" id="coin_5" name="coin_5" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="coin_10">10 centimes :</label>
+                <input type="number" id="coin_10" name="coin_10" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="coin_20">20 centimes :</label>
+                <input type="number" id="coin_20" name="coin_20" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="coin_50">50 centimes :</label>
+                <input type="number" id="coin_50" name="coin_50" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="coin_1_euro">1 euro :</label>
+                <input type="number" id="coin_1_euro" name="coin_1_euro" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="coin_2_euros">2 euros :</label>
+                <input type="number" id="coin_2_euros" name="coin_2_euros" min="0" value=""  placeholder="0"><br>
+
+                <h3>Total des valeurs des pièces :</h3>
+                <p id="total_coins_value">0€</p>
+
+                
+        </div>
+
+        <div class="form-column">
+            <h2>Billets</h2>
+                <label for="banknote_5">5 euros :</label>
+                <input type="number" id="banknote_5" name="banknote_5" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="banknote_10">10 euros :</label>
+                <input type="number" id="banknote_10" name="banknote_10" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="banknote_20">20 euros :</label>
+                <input type="number" id="banknote_20" name="banknote_20" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="banknote_50">50 euros :</label>
+                <input type="number" id="banknote_50" name="banknote_50" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="banknote_100">100 euros :</label>
+                <input type="number" id="banknote_100" name="banknote_100" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="banknote_200">200 euros :</label>
+                <input type="number" id="banknote_200" name="banknote_200" min="0" value=""  placeholder="0"><br>
+                <br><br><br><br><br><br><br>
+                <h3>Total des valeurs des billets :</h3>
+                <p id="total_banknotes_value">0€</p>
+    
+        </div>
+        <div class="form-column">
+            <h2>Billets Enlevés</h2>
+                <label for="delbanknote_5">5 euros :</label>
+                <input type="number" id="delbanknote_5" name="delbanknote_5" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="delbanknote_10">10 euros :</label>
+                <input type="number" id="delbanknote_10" name="delbanknote_10" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="delbanknote_20">20 euros :</label>
+                <input type="number" id="delbanknote_20" name="delbanknote_20" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="delbanknote_50">50 euros :</label>
+                <input type="number" id="delbanknote_50" name="delbanknote_50" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="delbanknote_100">100 euros :</label>
+                <input type="number" id="delbanknote_100" name="delbanknote_100" min="0" value=""  placeholder="0"><br>
+                <br>
+                <label for="delbanknote_200">200 euros :</label>
+                <input type="number" id="delbanknote_200" name="delbanknote_200" min="0" value=""  placeholder="0"><br>
+                <br><br><br><br><br><br><br>
+                <h3>Total des valeurs des billets Enlevés:</h3>
+                <p id="deltotal_banknotes_value">0€</p>
+            
+        </div>
+    </div>
+
+    <h2>Total général :</h2>
+    <p id="total_general_value">0€</p>
+
+    <br>
+    <input type="submit" value="Enregistrer">
+    </form>
+
+    
+
+    <br>
+    <form action="/precise_date" method="post">
+        <label for="date">Voir les données du jour :</label>
+        <input type="date" id="date" name="date" required><br>
+        <br>
+        <input type="submit" value="Voir">
+    </form>
+    <br>
+    <form action="/get_file" method="post">
+        <input type="submit" value="Télécharger le Fichier Excel">
+    </form>
+    <script>
+        const updateTotal = () => {
+            const coinsValue = {
+                "coin_1": 0.01,
+                "coin_2": 0.02,
+                "coin_5": 0.05,
+                "coin_10": 0.10,
+                "coin_20": 0.20,
+                "coin_50": 0.50,
+                "coin_1_euro": 1.00,
+                "coin_2_euros": 2.00
+            };
+    
+            let totalCoinsValue = 0;
+            for (const coin in coinsValue) {
+                const quantity = parseInt(document.getElementById(coin).value) || 0;
+                totalCoinsValue += quantity * coinsValue[coin];
+            }
+            document.getElementById('total_coins_value').innerText = totalCoinsValue.toFixed(2) + "€";
+    
+            let totalBanknotesValue = 0;
+            const banknotes = ["banknote_5", "banknote_10", "banknote_20", "banknote_50", "banknote_100", "banknote_200"];
+            for (const banknote of banknotes) {
+                const quantity = parseInt(document.getElementById(banknote).value) || 0;
+                totalBanknotesValue += quantity * parseInt(banknote.split("_")[1]);
+            }
+            document.getElementById('total_banknotes_value').innerText = totalBanknotesValue + "€";
+    
+            let deltotalBanknotesValue = 0;
+            const delbanknotes = ["delbanknote_5", "delbanknote_10", "delbanknote_20", "delbanknote_50", "delbanknote_100", "delbanknote_200"];
+            for (const delbanknote of delbanknotes) {
+                const quantity = parseInt(document.getElementById(delbanknote).value) || 0;
+                deltotalBanknotesValue += quantity * parseInt(delbanknote.split("_")[1]);
+            }
+            document.getElementById('deltotal_banknotes_value').innerText = deltotalBanknotesValue + "€";
+    
+            const totalGeneralValue = totalCoinsValue + totalBanknotesValue - deltotalBanknotesValue;
+            document.getElementById('total_general_value').innerText = totalGeneralValue.toFixed(2) + "€";
+        };
+        
+        const inputElements = document.querySelectorAll('.form-column input[type="number"]');
+        inputElements.forEach(input => {
+            input.addEventListener('input', updateTotal);
+        });
+    </script>
+
+{% if precise_data %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const preciseData = {{ precise_data | tojson }};
+        for (const key in preciseData) {
+            const element = document.getElementById(key);
+            if (element) {
+                element.value = preciseData[key];
+            }
+        }
+        updateTotal()
+    });
+    
+</script>
+{% endif %}
+</body>
+</html>

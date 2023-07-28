@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Résumé des Monnaies Reçues</title>
+</head>
+<body>
+    <h1>Résumé des Monnaies Reçues</h1>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Total</th>
+            <th>1 centime</th>
+            <th>2 centimes</th>
+            <th>5 centimes</th>
+            <th>10 centimes</th>
+            <th>20 centimes</th>
+            <th>50 centimes</th>
+            <th>1 euro</th>
+            <th>2 euros</th>
+            <th>5 euros</th>
+            <th>10 euros</th>
+            <th>20 euros</th>
+            <th>50 euros</th>
+            <th>100 euros</th>
+            <th>200 euros</th>
+            <th>Enlevé 5 euros</th>
+            <th>Enlevé 10 euros</th>
+            <th>Enlevé 20 euros</th>
+            <th>Enlevé 50 euros</th>
+            <th>Enlevé 100 euros</th>
+            <th>Enlevé 200 euros</th>
+
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row["Date"] }}</td>
+            <td>{{ row["Total"] }}€</td>
+            <td>{{ row["1 centime"] }}</td>
+            <td>{{ row["2 centimes"] }}</td>
+            <td>{{ row["5 centimes"] }}</td>
+            <td>{{ row["10 centimes"] }}</td>
+            <td>{{ row["20 centimes"] }}</td>
+            <td>{{ row["50 centimes"] }}</td>
+            <td>{{ row["1 euro"] }}</td>
+            <td>{{ row["2 euros"] }}</td>
+            <td>{{ row["5 euros"] }}</td>
+            <td>{{ row["10 euros"] }}</td>
+            <td>{{ row["20 euros"] }}</td>
+            <td>{{ row["50 euros"] }}</td>
+            <td>{{ row["100 euros"] }}</td>
+            <td>{{ row["200 euros"] }}</td>
+            <td>{{ row["Enlevé 5 euros"] }}</td>
+            <td>{{ row["Enlevé 10 euros"] }}</td>
+            <td>{{ row["Enlevé 20 euros"] }}</td>
+            <td>{{ row["Enlevé 50 euros"] }}</td>
+            <td>{{ row["Enlevé 100 euros"] }}</td>
+            <td>{{ row["Enlevé 200 euros"] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Retour à la page principale</a>
+</body>
+</html>
