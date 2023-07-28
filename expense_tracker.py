@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-EXCEL_FILE_PATH = os.path.join(BASE_DIR, 'data.xlsx')
+EXCEL_FILE_PATH = os.path.join(BASE_DIR, 'monnaie.xlsx')
 
 if not os.path.exists(EXCEL_FILE_PATH):
     wb = Workbook()
